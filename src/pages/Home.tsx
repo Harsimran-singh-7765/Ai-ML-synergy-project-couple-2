@@ -32,7 +32,7 @@ export function Home({ coupleNames }: HomeProps) {
         <div className="relative z-10 text-center px-4 max-w-4xl">
           <div className="flex items-center justify-center mb-4">
             <Brain className="w-12 h-12 text-white mr-4" />
-            <h2 className="text-2xl text-white font-semibold">AI/ML Love Hub</h2>
+            <h2 className="text-2xl text-white font-semibold">AI/ML Hub</h2>
           </div>
           <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
             {coupleNames.partner1} & {coupleNames.partner2}'s Love Games
