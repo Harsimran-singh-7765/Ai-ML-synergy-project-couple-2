@@ -1,5 +1,5 @@
 import React from 'react';
-import { Play, Brain, Sparkles } from 'lucide-react';
+import { Play, Brain, Sparkles, Users } from 'lucide-react';
 import { Game } from '../types';
 import { Link } from 'react-router-dom';
 
@@ -16,6 +16,10 @@ export function GameCard({ game, index }: GameCardProps) {
     'hover:scale-105',
     'hover:rotate-1'
   ];
+
+  const handleJoinGame = () => {
+    window.open('https://www.gameflare.com/embed/fireboy-and-watergirl-forest-temple', '_blank');
+  };
 
   return (
     <div 
@@ -35,13 +39,21 @@ export function GameCard({ game, index }: GameCardProps) {
             </span>
           </div>
         </div>
-        <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+        <div className="absolute inset-0 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <Link
             to={`/game/${game.id}`}
             className="transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-white text-gray-900 rounded-full p-3 shadow-lg hover:scale-110"
           >
             <Play className="w-6 h-6" />
           </Link>
+          {game.id === '1' && (
+            <button
+              onClick={handleJoinGame}
+              className="transform -translate-y-4 group-hover:translate-y-0 transition-all duration-300 bg-pink-600 text-white rounded-full p-3 shadow-lg hover:scale-110"
+            >
+              <Users className="w-6 h-6" />
+            </button>
+          )}
         </div>
       </div>
       <div className="p-4">

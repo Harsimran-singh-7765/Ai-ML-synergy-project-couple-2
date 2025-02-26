@@ -8,6 +8,7 @@ export interface Game {
   thumbnailUrl: string;
   projectId: string;
   featured: boolean;
+  type: 'scratch' | 'embed' | 'gameflare';
 }
 
 export interface Theme {
