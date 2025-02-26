@@ -23,7 +23,7 @@ export function Header({ timeLeft, coupleNames }: HeaderProps) {
         <div className="flex items-center justify-between">
           <Link to="/" className="flex items-center space-x-2">
             <Brain className="w-8 h-8 text-pink-600 dark:text-pink-400" />
-            <span className="text-xl font-bold text-gray-900 dark:text-white">AI/ML Love Hub</span>
+            <span className="text-xl font-bold text-gray-900 dark:text-white">AI/ML Hub</span>
           </Link>
           
           <div className="flex items-center space-x-4">
